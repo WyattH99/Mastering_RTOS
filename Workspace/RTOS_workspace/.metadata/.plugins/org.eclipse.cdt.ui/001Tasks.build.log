@@ -1,10 +1,57 @@
-13:41:42 **** Incremental Build of configuration Debug for project 001Tasks ****
+11:02:05 **** Incremental Build of configuration Debug for project 001Tasks ****
 make -j12 all 
-arm-none-eabi-size   001Tasks.elf 
-   text	   data	    bss	    dec	    hex	filename
-  29712	    108	  84948	 114768	  1c050	001Tasks.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config" -I"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/OS" -I"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/SEGGER" -I"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS" -I"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/include" -I"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:74:9: error: unknown type name 'TaskHandle_t'
+   74 |         TaskHandle_t task1_handle;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:75:9: error: unknown type name 'TaskHandle_t'
+   75 |         TaskHandle_t task2_handle;
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:77:9: error: unknown type name 'BaseType_t'
+   77 |         BaseType_t status;
+      |         ^~~~~~~~~~
+../Core/Src/main.c:106:3: warning: implicit declaration of function 'SEGGER_SYSVIEW_Conf' [-Wimplicit-function-declaration]
+  106 |   SEGGER_SYSVIEW_Conf();
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:109:12: warning: implicit declaration of function 'xTaskCreate' [-Wimplicit-function-declaration]
+  109 |   status = xTaskCreate(task1_handler, "Task-1", 200, "Hello World from Task-1", 2, &task1_handle);
+      |            ^~~~~~~~~~~
+../Core/Src/main.c:111:3: warning: implicit declaration of function 'configASSERT' [-Wimplicit-function-declaration]
+  111 |   configASSERT(status == pdPASS);
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:111:26: error: 'pdPASS' undeclared (first use in this function)
+  111 |   configASSERT(status == pdPASS);
+      |                          ^~~~~~
+../Core/Src/main.c:111:26: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:118:3: warning: implicit declaration of function 'vTaskStartScheduler' [-Wimplicit-function-declaration]
+  118 |   vTaskStartScheduler();
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'task1_handler':
+../Core/Src/main.c:244:17: warning: implicit declaration of function 'snprintf' [-Wimplicit-function-declaration]
+  244 |                 snprintf(msg, 100, "%s\n", (char*)parameters);
+      |                 ^~~~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'snprintf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:244:17: warning: incompatible implicit declaration of built-in function 'snprintf' [-Wbuiltin-declaration-mismatch]
+  244 |                 snprintf(msg, 100, "%s\n", (char*)parameters);
+      |                 ^~~~~~~~
+../Core/Src/main.c:244:17: note: include '<stdio.h>' or provide a declaration of 'snprintf'
+../Core/Src/main.c:245:17: warning: implicit declaration of function 'SEGGER_SYSVIEW_PrintfTarget' [-Wimplicit-function-declaration]
+  245 |                 SEGGER_SYSVIEW_PrintfTarget(msg);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:247:17: warning: implicit declaration of function 'taskYIELD' [-Wimplicit-function-declaration]
+  247 |                 taskYIELD();
+      |                 ^~~~~~~~~
+../Core/Src/main.c: In function 'task2_handler':
+../Core/Src/main.c:259:17: warning: incompatible implicit declaration of built-in function 'snprintf' [-Wbuiltin-declaration-mismatch]
+  259 |                 snprintf(msg, 100, "%s\n", (char*)parameters);
+      |                 ^~~~~~~~
+../Core/Src/main.c:259:17: note: include '<stdio.h>' or provide a declaration of 'snprintf'
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
 
-13:41:42 Build Finished. 0 errors, 0 warnings. (took 629ms)
+11:02:06 Build Failed. 5 errors, 9 warnings. (took 801ms)
 

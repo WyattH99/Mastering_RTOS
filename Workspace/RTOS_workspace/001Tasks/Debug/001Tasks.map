@@ -3726,6 +3726,33 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x10 ./ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
  .debug_macro   0x0000000000000000       0x35 ./ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
  .debug_macro   0x0000000000000000       0x20 ./ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+ .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .text          0x0000000000000000        0x0 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .data          0x0000000000000000        0x0 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .bss           0x0000000000000000        0x0 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_info    0x0000000000000000       0x54 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_abbrev  0x0000000000000000       0x28 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_macro   0x0000000000000000       0x63 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_macro   0x0000000000000000      0xaa8 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_macro   0x0000000000000000       0x58 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_macro   0x0000000000000000       0x46 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_macro   0x0000000000000000       0x64 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_macro   0x0000000000000000       0x49 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_macro   0x0000000000000000       0xd1 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_macro   0x0000000000000000      0x220 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_line    0x0000000000000000      0x239 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .debug_str     0x0000000000000000     0x48cd ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .comment       0x0000000000000000       0x44 ./ThirdParty/SEGGER/Rec/segger_uart.o
+ .ARM.attributes
+                0x0000000000000000       0x34 ./ThirdParty/SEGGER/Rec/segger_uart.o
  .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/SEGGER/SEGGER_RTT.o
  .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/SEGGER/SEGGER_RTT.o
  .group         0x0000000000000000        0xc ./ThirdParty/SEGGER/SEGGER/SEGGER_RTT.o
@@ -4465,6 +4492,7 @@ LOAD ./ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F/port.o
 LOAD ./ThirdParty/FreeRTOS/portable/MemMang/heap_4.o
 LOAD ./ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Config_FreeRTOS.o
 LOAD ./ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.o
+LOAD ./ThirdParty/SEGGER/Rec/segger_uart.o
 LOAD ./ThirdParty/SEGGER/SEGGER/SEGGER_RTT.o
 LOAD ./ThirdParty/SEGGER/SEGGER/SEGGER_RTT_ASM_ARMv7M.o
 LOAD ./ThirdParty/SEGGER/SEGGER/SEGGER_RTT_printf.o

@@ -3,16 +3,16 @@ ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW.o: \
  ../ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW_Int.h \
  ../ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW.h \
  ../ThirdParty/SEGGER/SEGGER/SEGGER.h \
- /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/Global.h \
+ /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config/Global.h \
  ../ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h \
- /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Conf.h \
- /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/SEGGER_RTT_Conf.h \
+ /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Conf.h \
+ /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config/SEGGER_RTT_Conf.h \
  ../ThirdParty/SEGGER/SEGGER/SEGGER_RTT.h
 ../ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW_Int.h:
 ../ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW.h:
 ../ThirdParty/SEGGER/SEGGER/SEGGER.h:
-/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/Global.h:
+/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config/Global.h:
 ../ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h:
-/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Conf.h:
-/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/SEGGER_RTT_Conf.h:
+/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Conf.h:
+/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config/SEGGER_RTT_Conf.h:
 ../ThirdParty/SEGGER/SEGGER/SEGGER_RTT.h:
