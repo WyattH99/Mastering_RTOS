@@ -1068,7 +1068,7 @@ static void led_green_handler(void* parameters){
  800091c:	080078f8 	.word	0x080078f8
 
 08000920 <led_orange_handler>:
-//		}
+		}
 
 	}
 }

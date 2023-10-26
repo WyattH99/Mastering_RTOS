@@ -2,8 +2,8 @@
 ../Core/Src/main.c:160:6:SystemClock_Config	3
 ../Core/Src/main.c:208:13:MX_GPIO_Init	1
 ../Core/Src/main.c:250:13:led_green_handler	2
-../Core/Src/main.c:278:13:led_orange_handler	2
-../Core/Src/main.c:297:13:led_red_handler	2
-../Core/Src/main.c:317:13:button_handler	3
-../Core/Src/main.c:350:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:367:6:Error_Handler	1
+../Core/Src/main.c:270:13:led_orange_handler	2
+../Core/Src/main.c:289:13:led_red_handler	2
+../Core/Src/main.c:309:13:button_handler	3
+../Core/Src/main.c:342:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:359:6:Error_Handler	1
