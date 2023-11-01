@@ -53,10 +53,12 @@ TaskHandle_t print_task_handle;
 TaskHandle_t led_task_handle;
 TaskHandle_t rtc_task_handle;
 
-QueueHandle_t q_data;
-QueueHandle_t q_print;
+QueueHandle_t q_data_handle;
+QueueHandle_t q_print_handle;
 
 volatile uint8_t user_data;
+
+state_t curr_state = sMainMenu;
 
 /* USER CODE END PV */
 
@@ -136,13 +138,13 @@ int main(void)
 
   configASSERT(status == pdPASS);
 
-  q_data = xQueueCreate(10, sizeof(char));
+  q_data_handle = xQueueCreate(10, sizeof(char));
 
-  configASSERT(q_data != NULL);
+  configASSERT(q_data_handle != NULL);
 
-  q_print = xQueueCreate(10, sizeof(size_t));
+  q_print_handle = xQueueCreate(10, sizeof(size_t));
 
-  configASSERT(q_print != NULL);
+  configASSERT(q_print_handle != NULL);
 
   HAL_UART_Receive_IT(&huart2, &user_data, 1);
 
@@ -328,8 +330,30 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+// This function is called from the UART interrupt handler
 __weak void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
+
+	if(!xQueueIsQueueFullFromISR(q_data_handle)){
+		// Enqueue Data
+		xQueueSendFromISR(q_data_handle, (void*)&user_data, NULL);
+	}else{
+		if(user_data == '\n'){
+			// Remove the last item in the Queue
+			uint8_t empty_data;
+			xQueueReceiveFromISR(q_data_handle, (void*)&empty_data, NULL);
+			// Enqueue the \n
+			xQueueSendFromISR(q_data_handle, (void*)&user_data, NULL);
+		}
+	}
+
+	// If data is \n then notify the cmd_task
+	if(user_data == '\n'){
+		xTaskNotifyFromISR(cmd_task_handle, 0, eNoAction, NULL);
+	}
+
+	// Enable UART data byte reception
+	HAL_UART_Receive_IT(&huart2, (uint8_t*)&user_data, 1);
 
 
 }

@@ -41,6 +41,35 @@ extern "C" {
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
 
+
+// Define a command
+typedef struct{
+	uint8_t payload[10]; // stores the data bytes
+	uint8_t len; // length
+}command_t;
+
+// Application states
+typedef enum{
+	sMainMenu = 0,
+	sLedEffect,
+	sRtcMenu,
+	sRtcTimeConfig,
+	sRtcDateConfig,
+	sRtcReport,
+}state_t;
+
+extern TaskHandle_t menu_task_handle;
+extern TaskHandle_t cmd_task_handle;
+extern TaskHandle_t print_task_handle;
+extern TaskHandle_t led_task_handle;
+extern TaskHandle_t rtc_task_handle;
+
+extern QueueHandle_t q_data_handle;
+extern QueueHandle_t q_print_handle;
+
+extern state_t curr_state;
+
+
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
