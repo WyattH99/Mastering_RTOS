@@ -1,0 +1,12 @@
+/*
+ * task_handler.c
+ *
+ *  Created on: Nov 1, 2023
+ *      Author: wyatt
+ */
+
+void menu_task(void *param){
+	while(1){
+
+	}
+}
