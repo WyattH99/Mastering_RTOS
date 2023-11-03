@@ -69,11 +69,11 @@ static void MX_RTC_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
-void menu_task_handler(void* param);
-void cmd_task_handler(void* param);
-void print_task_handler(void* param);
-void led_task_handler(void* param);
-void rtc_task_handler(void* param);
+//void menu_task_handler(void* param);
+//void cmd_task_handler(void* param);
+//void print_task_handler(void* param);
+//void led_task_handler(void* param);
+//void rtc_task_handler(void* param);
 
 
 /* USER CODE END PFP */

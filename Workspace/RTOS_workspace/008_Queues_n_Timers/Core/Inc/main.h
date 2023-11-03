@@ -32,6 +32,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "string.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
@@ -84,6 +85,16 @@ extern state_t curr_state;
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+
+void menu_task_handler(void* param);
+void cmd_task_handler(void* param);
+void print_task_handler(void* param);
+void led_task_handler(void* param);
+void rtc_task_handler(void* param);
+
+void led_effect_stop(void);
+void led_effect(int n);
+
 
 /* USER CODE BEGIN EFP */
 

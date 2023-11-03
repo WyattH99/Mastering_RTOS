@@ -10,12 +10,14 @@
 int extract_command(command_t* cmd);
 void process_command(command_t* cmd);
 
+const char* msg_inv = "//////Invalid Option//////\n";
 
 
 void menu_task_handler(void* param){
 
 	uint32_t cmd_addr;
 	command_t* cmd;
+	int option;
 	const char* msg_menu = "===================\n"
 							"|		Menu		|\n"
 							"===================\n"
@@ -25,11 +27,50 @@ void menu_task_handler(void* param){
 							"Enter your choice here: ";
 
 	while(1){
+		// Send message to the menu
 		xQueueSend(q_print_handle, &msg_menu, portMAX_DELAY);
 
+		// Wait for a response and put it into the cmd_addr
 		xTaskNotifyWait(0, 0, &cmd_addr, portMAX_DELAY);
 
-		cmd_addr = (command_t*)cmd_addr;
+		// Cast it to a command_t pointer and assign the address to cmd
+		cmd = (command_t*)cmd_addr;
+
+		// Ensure the cmd is a valid entry of length 1. Valid Commands: 0, 1, or 2
+		if(cmd->len == 1){
+
+			// Convert the ASCI to number by subtracting 48
+			option = cmd->payload[0] - 48;
+
+			switch(option){
+			case 0:
+				// Led Effects
+				curr_state = sLedEffect;
+				xTaskNotify(led_task_handle, 0, eNoAction);
+				break;
+			case 1:
+				// RTC Menu
+				curr_state = sRtcMenu;
+				xTaskNotify(rtc_task_handle, 0, eNoAction);
+				break;
+			case 2:
+				// Exit
+
+				break;
+			default:
+				xQueueSend(q_print_handle, &msg_inv, portMAX_DELAY);
+				continue;
+			}
+
+		}else{
+
+			// Invalid Entry
+			xQueueSend(q_print_handle, &msg_inv, portMAX_DELAY);
+
+		}
+
+		xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+
 	}
 }
 
@@ -104,7 +145,53 @@ void print_task_handler(void* param){
 }
 
 void led_task_handler(void* param){
+
+	uint32_t cmd_addr;
+	command_t* cmd;
+	const char* msg_led = "===================\n"
+							"|    LED Effects    |\n"
+							"===================\n"
+							"(none, e1, e2, e3, e4)\n"
+							"Enter your choice here: ";
+
 	while(1){
+
+		// TODO: Wait for notification (Notify Wait)
+		xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+
+		// TODO: Print LED menu
+		xQueueSend(q_print_handle, &msg_led, portMAX_DELAY);
+
+		// TODO: wait for LED commands (Notify Wait)
+		xTaskNotifyWait(0, 0, &cmd_addr, portMAX_DELAY);
+
+		cmd = (command_t*)cmd_addr;
+
+		if(cmd->len <= 4){
+			if(! strcmp((char*)cmd->payload, "none")){
+				led_effect_stop();
+			}else if(! strcmp((char*)cmd->payload, "e1")){
+				led_effect(1);
+			}else if(! strcmp((char*)cmd->payload, "e2")){
+				led_effect(2);
+			}else if(! strcmp((char*)cmd->payload, "e3")){
+				led_effect(3);
+			}else if(! strcmp((char*)cmd->payload, "e4")){
+				led_effect(4);
+			}else{
+				xQueueSend(q_print_handle, &msg_inv, portMAX_DELAY);
+			}
+		}else{
+			// TODO: print Invalid Message
+			xQueueSend(q_print_handle, &msg_inv, portMAX_DELAY);
+
+			// TODO: update state variable
+			curr_state = sMainMenu;
+
+			// TODO: Notify menu task
+			xTaskNotify(menu_task_handle, 0, eNoAction);
+
+		}
 
 	}
 }
