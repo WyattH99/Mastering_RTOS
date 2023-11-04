@@ -39,7 +39,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/task.h \
  /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/list.h \
  /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/queue.h \
- /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/task.h
+ /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/task.h \
+ /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/timers.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -82,3 +83,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/list.h:
 /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/queue.h:
 /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/task.h:
+/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include/timers.h:

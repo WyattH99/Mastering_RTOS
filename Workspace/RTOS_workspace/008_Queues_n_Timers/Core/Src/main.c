@@ -56,6 +56,8 @@ TaskHandle_t rtc_task_handle;
 QueueHandle_t q_data_handle;
 QueueHandle_t q_print_handle;
 
+TimerHandle_t led_timer_handle[4];
+
 volatile uint8_t user_data;
 
 state_t curr_state = sMainMenu;
@@ -68,6 +70,8 @@ static void MX_GPIO_Init(void);
 static void MX_RTC_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
+
+void led_effect_callback(TimerHandle_t xTimer);
 
 //void menu_task_handler(void* param);
 //void cmd_task_handler(void* param);
@@ -146,7 +150,13 @@ int main(void)
 
   configASSERT(q_print_handle != NULL);
 
-  HAL_UART_Receive_IT(&huart2, &user_data, 1);
+  // Create software timers for LED effects
+  for(int i=0; i<4; i++){
+	  led_timer_handle[i] = xTimerCreate("led_timer", pdMS_TO_TICKS(500), pdTRUE, (void*)(i+1), led_effect_callback);
+
+  }
+
+  HAL_UART_Receive_IT(&huart2, (uint8_t*)&user_data, 1);
 
   vTaskStartScheduler();
 
@@ -329,6 +339,27 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void led_effect_callback(TimerHandle_t xTimer){
+
+	int id;
+	id = (uint32_t) pvTimerGetTimerID(xTimer);
+
+	switch(id){
+	case 1:
+		LED_effect1();
+		break;
+	case 2:
+		LED_effect2();
+		break;
+	case 3:
+		LED_effect3();
+		break;
+	case 4:
+		LED_effect4();
+		break;
+	}
+}
 
 // This function is called from the UART interrupt handler
 __weak void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)

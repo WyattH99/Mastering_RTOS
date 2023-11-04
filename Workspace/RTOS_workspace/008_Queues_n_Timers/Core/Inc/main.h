@@ -36,6 +36,7 @@ extern "C" {
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
+#include "timers.h"
 
 /* USER CODE END Includes */
 
@@ -68,6 +69,8 @@ extern TaskHandle_t rtc_task_handle;
 extern QueueHandle_t q_data_handle;
 extern QueueHandle_t q_print_handle;
 
+extern TimerHandle_t led_timer_handle[4];
+
 extern state_t curr_state;
 
 
@@ -94,6 +97,12 @@ void rtc_task_handler(void* param);
 
 void led_effect_stop(void);
 void led_effect(int n);
+
+void LED_effect1(void);
+void LED_effect2(void);
+void LED_effect3(void);
+void LED_effect4(void);
+
 
 
 /* USER CODE BEGIN EFP */
