@@ -18,12 +18,12 @@ void menu_task_handler(void* param){
 	uint32_t cmd_addr;
 	command_t* cmd;
 	int option;
-	const char* msg_menu = "===================\n"
-							"|		Menu		|\n"
-							"===================\n"
-							"LED Effect		----> 0\n"
-							"Date and Time  ----> 1\n"
-							"Exit			----> 2\n"
+	const char* msg_menu = "  =================== \n"
+							"||       Menu       ||\n"
+							"  =================== \n"
+							"LED Effect    ----> 0\n"
+							"Date and Time ----> 1\n"
+							"Exit          ----> 2\n"
 							"Enter your choice here: ";
 
 	while(1){
@@ -139,7 +139,11 @@ int extract_command(command_t* cmd){
 
 
 void print_task_handler(void* param){
+
+	uint32_t* msg;
 	while(1){
+		xQueueReceive(q_print_handle, &msg, portMAX_DELAY);
+		HAL_UART_Transmit(&huart2, (uint8_t*)msg, strlen((char*)msg), HAL_MAX_DELAY);
 
 	}
 }
@@ -148,9 +152,9 @@ void led_task_handler(void* param){
 
 	uint32_t cmd_addr;
 	command_t* cmd;
-	const char* msg_led = "===================\n"
-							"|    LED Effects    |\n"
-							"===================\n"
+	const char* msg_led = "  =================== \n"
+							"||   LED Effects   ||\n"
+							"  =================== \n"
 							"(none, e1, e2, e3, e4)\n"
 							"Enter your choice here: ";
 

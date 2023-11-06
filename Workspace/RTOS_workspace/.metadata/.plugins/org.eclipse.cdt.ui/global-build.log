@@ -1,4 +1,102 @@
-11:58:43 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+14:59:55 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+14:59:59 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:18:06 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:18:34 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:32:19 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:32:51 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:33:14 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:46:48 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:47:40 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:52:47 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:54:58 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:55:03 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:55:44 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:56:16 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31104	     40	  79016	 110160	  1ae50	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+15:58:12 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/led_effect.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_effect.d" -MT"Core/Src/led_effect.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_effect.o"
 arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,8 +105,267 @@ Finished building target: 008_Queues_n_Timers.elf
 arm-none-eabi-size   008_Queues_n_Timers.elf 
 arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
    text	   data	    bss	    dec	    hex	filename
-  30512	     40	  79016	 109568	  1ac00	008_Queues_n_Timers.elf
+  31136	     40	  79016	 110192	  1ae70	008_Queues_n_Timers.elf
 Finished building: default.size.stdout
  
 Finished building: 008_Queues_n_Timers.list
+ 
+15:59:37 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31136	     40	  79016	 110192	  1ae70	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:16:42 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/task_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/task_handler.d" -MT"Core/Src/task_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/task_handler.o"
+arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_Queues_n_Timers.elf
+ 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_Queues_n_Timers.list
+ 
+16:16:57 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:17:11 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:18:01 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:18:09 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:18:51 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:19:16 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:19:26 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:19:49 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:21:06 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:21:44 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31152	     40	  79016	 110208	  1ae80	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:25:50 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/task_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/task_handler.d" -MT"Core/Src/task_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/task_handler.o"
+arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_Queues_n_Timers.elf
+ 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_Queues_n_Timers.list
+ 
+16:27:34 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/task_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/task_handler.d" -MT"Core/Src/task_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/task_handler.o"
+arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_Queues_n_Timers.elf
+ 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_Queues_n_Timers.list
+ 
+16:32:26 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_Queues_n_Timers.elf
+ 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_Queues_n_Timers.list
+ 
+16:32:35 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:32:43 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:32:52 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:33:09 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:33:39 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:33:54 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:34:57 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:35:19 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:35:47 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:37:32 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:39:02 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:41:20 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:41:37 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:41:54 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:42:17 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:42:41 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:43:24 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+16:43:47 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
  

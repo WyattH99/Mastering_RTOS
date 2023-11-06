@@ -68,7 +68,7 @@ void turn_on_odd_leds(void){
 void LED_control(int val){
 
 	for(int i=0; i<4; i++){
-		//HAL_GPIO_WritePin(LD3_GPIO_Port, (LED1 << i), ((val >> i)& 0x1));
+		HAL_GPIO_WritePin(LD3_GPIO_Port, (RED1_LED << i), ((val >> i)& 0x1));
 	}
 
 }

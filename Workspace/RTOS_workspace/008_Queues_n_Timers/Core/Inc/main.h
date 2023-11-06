@@ -73,6 +73,8 @@ extern TimerHandle_t led_timer_handle[4];
 
 extern state_t curr_state;
 
+extern UART_HandleTypeDef huart2;
+
 
 /* USER CODE END ET */
 
