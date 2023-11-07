@@ -66,6 +66,7 @@ void menu_task_handler(void* param){
 
 			// Invalid Entry
 			xQueueSend(q_print_handle, &msg_inv, portMAX_DELAY);
+			continue;
 
 		}
 
@@ -129,7 +130,7 @@ int extract_command(command_t* cmd){
 	do{
 		status = xQueueReceive(q_data_handle, &item, 0);
 		if(status == pdTRUE) cmd->payload[i++] = item;
-	}while(item != '\n');
+	}while(item != '\r');
 
 	cmd->payload[i-1] = '\0';
 	cmd->len = i-1;
@@ -188,21 +189,21 @@ void led_task_handler(void* param){
 		}else{
 			// TODO: print Invalid Message
 			xQueueSend(q_print_handle, &msg_inv, portMAX_DELAY);
-
-			// TODO: update state variable
-			curr_state = sMainMenu;
-
-			// TODO: Notify menu task
-			xTaskNotify(menu_task_handle, 0, eNoAction);
-
 		}
+
+		// TODO: update state variable
+		curr_state = sMainMenu;
+
+		// TODO: Notify menu task
+		xTaskNotify(menu_task_handle, 0, eNoAction);
+
 
 	}
 }
 
 void rtc_task_handler(void* param){
 
-	const char* msg_test = "+";
+//	const char* msg_test = "+";
 
 	while(1){
 		xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);

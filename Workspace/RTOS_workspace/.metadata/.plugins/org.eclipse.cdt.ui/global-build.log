@@ -1,88 +1,39 @@
-19:04:30 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+11:45:08 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
 make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-19:05:22 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-19:05:45 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-19:07:39 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-19:10:04 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-19:25:56 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-19:33:50 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/led_effect.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_effect.d" -MT"Core/Src/led_effect.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_effect.o"
 arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 008_Queues_n_Timers.elf
  
 arm-none-eabi-size   008_Queues_n_Timers.elf 
 arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
    text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+  31244	     40	  79016	 110300	  1aedc	008_Queues_n_Timers.elf
 Finished building: default.size.stdout
  
 Finished building: 008_Queues_n_Timers.list
  
-19:35:01 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+11:45:11 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31244	     40	  79016	 110300	  1aedc	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+11:46:42 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/led_effect.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_effect.d" -MT"Core/Src/led_effect.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/led_effect.o"
 arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: 008_Queues_n_Timers.elf
  
 arm-none-eabi-size   008_Queues_n_Timers.elf 
 arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
    text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
+  31260	     40	  79016	 110316	  1aeec	008_Queues_n_Timers.elf
 Finished building: default.size.stdout
  
 Finished building: 008_Queues_n_Timers.list
  
-19:35:39 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-19:36:09 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31164	     40	  79016	 110220	  1ae8c	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-19:47:12 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+11:52:16 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/task_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/task_handler.d" -MT"Core/Src/task_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/task_handler.o"
 arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -91,93 +42,8 @@ Finished building target: 008_Queues_n_Timers.elf
 arm-none-eabi-size   008_Queues_n_Timers.elf 
 arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
    text	   data	    bss	    dec	    hex	filename
-  31200	     40	  79016	 110256	  1aeb0	008_Queues_n_Timers.elf
+  31260	     40	  79016	 110316	  1aeec	008_Queues_n_Timers.elf
 Finished building: default.size.stdout
  
 Finished building: 008_Queues_n_Timers.list
- 
-19:49:09 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 008_Queues_n_Timers.elf
- 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
-   text	   data	    bss	    dec	    hex	filename
-  31200	     40	  79016	 110256	  1aeb0	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-Finished building: 008_Queues_n_Timers.list
- 
-19:49:48 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/task_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/task_handler.d" -MT"Core/Src/task_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/task_handler.o"
-../Core/Src/task_handler.c: In function 'rtc_task_handler':
-../Core/Src/task_handler.c:205:21: warning: unused variable 'msg_test' [-Wunused-variable]
-  205 |         const char* msg_test = "+";
-      |                     ^~~~~~~~
-arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 008_Queues_n_Timers.elf
- 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
-   text	   data	    bss	    dec	    hex	filename
-  31168	     40	  79016	 110224	  1ae90	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-Finished building: 008_Queues_n_Timers.list
- 
-19:50:46 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/task_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/task_handler.d" -MT"Core/Src/task_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/task_handler.o"
-../Core/Src/task_handler.c: In function 'rtc_task_handler':
-../Core/Src/task_handler.c:205:21: warning: unused variable 'msg_test' [-Wunused-variable]
-  205 |         const char* msg_test = "+";
-      |                     ^~~~~~~~
-arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 008_Queues_n_Timers.elf
- 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
-   text	   data	    bss	    dec	    hex	filename
-  31184	     40	  79016	 110240	  1aea0	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-Finished building: 008_Queues_n_Timers.list
- 
-19:55:26 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 008_Queues_n_Timers.elf
- 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
-   text	   data	    bss	    dec	    hex	filename
-  31184	     40	  79016	 110240	  1aea0	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-Finished building: 008_Queues_n_Timers.list
- 
-20:03:51 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 008_Queues_n_Timers.elf
- 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
-   text	   data	    bss	    dec	    hex	filename
-  31184	     40	  79016	 110240	  1aea0	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-Finished building: 008_Queues_n_Timers.list
- 
-20:07:13 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31184	     40	  79016	 110240	  1aea0	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
  

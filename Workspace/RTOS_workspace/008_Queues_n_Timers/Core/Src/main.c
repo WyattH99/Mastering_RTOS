@@ -370,7 +370,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 		// Enqueue Data
 		xQueueSendFromISR(q_data_handle, (void*)&user_data, NULL);
 	}else{
-		if(user_data == '\n'){
+		if(user_data == '\r'){
 			// Remove the last item in the Queue
 			xQueueReceiveFromISR(q_data_handle, (void*)&dummy, NULL);
 			// Enqueue the \n
@@ -379,7 +379,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	}
 
 	// If data is \n then notify the cmd_task
-	if(user_data == '\n'){
+	if(user_data == '\r'){
 		xTaskNotifyFromISR(cmd_task_handle, 0, eNoAction, NULL);
 	}
 

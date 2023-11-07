@@ -4,8 +4,8 @@
 ../Core/Src/led_effect.c:38:6:turn_on_all_leds	1
 ../Core/Src/led_effect.c:48:6:turn_on_even_leds	1
 ../Core/Src/led_effect.c:58:6:turn_on_odd_leds	1
-../Core/Src/led_effect.c:68:6:LED_control	2
-../Core/Src/led_effect.c:78:6:LED_effect1	2
-../Core/Src/led_effect.c:87:6:LED_effect2	2
-../Core/Src/led_effect.c:96:6:LED_effect3	1
-../Core/Src/led_effect.c:105:6:LED_effect4	1
+../Core/Src/led_effect.c:68:6:LED_control	6
+../Core/Src/led_effect.c:94:6:LED_effect1	2
+../Core/Src/led_effect.c:103:6:LED_effect2	2
+../Core/Src/led_effect.c:112:6:LED_effect3	1
+../Core/Src/led_effect.c:121:6:LED_effect4	1
