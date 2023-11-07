@@ -18,9 +18,9 @@ void menu_task_handler(void* param){
 	uint32_t cmd_addr;
 	command_t* cmd;
 	int option;
-	const char* msg_menu = "  =================== \n"
+	const char* msg_menu =  "  ==================  \n"
 							"||       Menu       ||\n"
-							"  =================== \n"
+							"  ==================  \n"
 							"LED Effect    ----> 0\n"
 							"Date and Time ----> 1\n"
 							"Exit          ----> 2\n"
@@ -102,18 +102,18 @@ void process_command(command_t* cmd){
 	extract_command(cmd);
 
 	switch(curr_state){
-	case sMainMenu:
-		xTaskNotify(menu_task_handle, (uint32_t)cmd, eSetValueWithOverwrite);
-		break;
-	case sLedEffect:
-		xTaskNotify(led_task_handle, (uint32_t)cmd, eSetValueWithOverwrite);
-		break;
-	case sRtcMenu:
-	case sRtcTimeConfig:
-	case sRtcDateConfig:
-	case sRtcReport:
-		xTaskNotify(rtc_task_handle, (uint32_t)cmd, eSetValueWithOverwrite);
-		break;
+		case sMainMenu:
+			xTaskNotify(menu_task_handle, (uint32_t)cmd, eSetValueWithOverwrite);
+			break;
+		case sLedEffect:
+			xTaskNotify(led_task_handle, (uint32_t)cmd, eSetValueWithOverwrite);
+			break;
+		case sRtcMenu:
+		case sRtcTimeConfig:
+		case sRtcDateConfig:
+		case sRtcReport:
+			xTaskNotify(rtc_task_handle, (uint32_t)cmd, eSetValueWithOverwrite);
+			break;
 	}
 }
 
@@ -203,12 +203,72 @@ void led_task_handler(void* param){
 
 void rtc_task_handler(void* param){
 
-//	const char* msg_test = "+";
+	const char* msg_rtc =
+			"  ==================  \n"
+			"||        RTC       ||\n"
+			"  ==================  \n"
+			"Configure Time  ---> 0\n"
+			"Configure Date  ---> 1\n"
+			"Enable Reporting---> 2\n"
+			"Exit            ---> 4\n"
+			"Enter your choice here: ";
+
+	const char* msg_rtc_hh = "Enter Hour (1-12): ";
+	const char* msg_rtc_mm = "Enter Minutes (0-59): ";
+	const char* msg_rtc_ss = "Enter Seconds (0-59): ";
+
+	const char* msg_rtc_dd = "Enter Date (1-31): ";
+	const char* msg_rtc_mo = "Enter Month (1-12): ";
+	const char* msg_rtc_dow = "Enter Day (1-7 Sun:1): ";
+	const char* msg_rtc_yr = "Enter Year (0-99): ";
+
+	const char* msg_conf = "Configuration Successful\n";
+	const char* msg_rtc_report = "Enable Time & Date Reporting (y/n)?: ";
+
+	uint32_t cmd_addr;
+	command_t* cmd;
 
 	while(1){
+
+		//TODO: Notify Wait
 		xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
 
-		//xQueueSend(q_print_handle, &msg_test, portMAX_DELAY);
+		//TODO: Print the rtc menu and show current date and time information
+		xQueueSend(q_print_handle, &msg_rtc, portMAX_DELAY);
+
+		while(curr_state != sMainMenu){
+
+			//TODO: Notify Wait
+
+
+			switch(curr_state){
+				case sRtcMenu:{
+					//TODO: process RTC menu commands
+					break;
+				}
+				case sRtcTimeConfig:{
+					//TODO: get hh, mm , ss information and configure RTC
+
+					//TODO: take care of invalid entries
+
+					break;
+				}
+				case sRtcDateConfig:{
+					//TODO: get date, month, day, year information and configure RTC
+
+					//TODO: take care of invalid entries
+
+					break;
+				}
+				case sRtcReport:{
+					//TODO: enable or disable RTC current time reporting over ITM printf
+
+					break;
+				}
+			}
+		}
+
+		//TODO: Notify menu task
 
 	}
 }
