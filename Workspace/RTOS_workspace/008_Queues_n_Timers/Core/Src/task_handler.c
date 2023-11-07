@@ -201,7 +201,13 @@ void led_task_handler(void* param){
 }
 
 void rtc_task_handler(void* param){
+
+	const char* msg_test = "+";
+
 	while(1){
+		xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+
+		//xQueueSend(q_print_handle, &msg_test, portMAX_DELAY);
 
 	}
 }

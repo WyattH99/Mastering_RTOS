@@ -6,16 +6,20 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="HOOK"/>
+		<item key="selection" value="SEGGER_UART_init"/>
 		<list key="findhistory">
+			<item value="SEGGER_UART_init"/>
+			<item value="TimerCreateTimerTask"/>
+			<item value="TaskStartScheduler"/>
+			<item value="RTT_BUFFER_SIZE"/>
 			<item value="hook"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="808"/>
-		<item key="DIALOG_Y_ORIGIN" value="413"/>
+		<item key="DIALOG_X_ORIGIN" value="1104"/>
+		<item key="DIALOG_Y_ORIGIN" value="494"/>
 		<item key="DIALOG_WIDTH" value="408"/>
 		<item key="DIALOG_HEIGHT" value="472"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>

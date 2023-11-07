@@ -1,1 +1,17 @@
-2023-10-24 15:18:48,551 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2023-11-06 14:38:29,720 [INFO] Gpio:273 - dependency for GPIO [USART2]
+2023-11-06 14:38:44,328 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,2,26,640x1065,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-11-06 15:14:22,847 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-11-06 16:40:30,886 [INFO] MainUpdater:2868 - connection check result : 10
+2023-11-06 16:40:30,889 [INFO] WebApp:390 - Apply proxy settings
+2023-11-06 16:40:30,889 [INFO] WebApp:475 - Chromium requires no authentication
+2023-11-06 16:40:30,891 [INFO] WebApp:418 - Direct internet connection detected
+2023-11-06 16:40:30,891 [INFO] WebApp:312 - Starting web application
+2023-11-06 16:40:30,891 [INFO] WebApp:520 - Web application path used /opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.common.mx_6.9.2.202309101412/db/plugins/mcufinder/reactClient1/index.html
+2023-11-06 16:40:31,203 [INFO] UserAuth:393 - Internet connection configuration mode: 1
+2023-11-06 16:40:48,366 [INFO] MainUpdater:2868 - connection check result : 10
+2023-11-06 16:40:48,367 [INFO] WebApp:390 - Apply proxy settings
+2023-11-06 16:40:48,367 [INFO] WebApp:475 - Chromium requires no authentication
+2023-11-06 16:40:48,367 [INFO] WebApp:418 - Direct internet connection detected
+2023-11-06 16:40:48,367 [INFO] WebApp:312 - Starting web application
+2023-11-06 16:40:48,367 [INFO] WebApp:520 - Web application path used /opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.common.mx_6.9.2.202309101412/db/plugins/mcufinder/reactClient1/index.html
+2023-11-06 16:40:48,385 [INFO] UserAuth:393 - Internet connection configuration mode: 1

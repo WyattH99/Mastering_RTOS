@@ -362,8 +362,9 @@ void led_effect_callback(TimerHandle_t xTimer){
 }
 
 // This function is called from the UART interrupt handler
-__weak void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
+	uint8_t dummy;
 
 	if(!xQueueIsQueueFullFromISR(q_data_handle)){
 		// Enqueue Data
@@ -371,8 +372,7 @@ __weak void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	}else{
 		if(user_data == '\n'){
 			// Remove the last item in the Queue
-			uint8_t empty_data;
-			xQueueReceiveFromISR(q_data_handle, (void*)&empty_data, NULL);
+			xQueueReceiveFromISR(q_data_handle, (void*)&dummy, NULL);
 			// Enqueue the \n
 			xQueueSendFromISR(q_data_handle, (void*)&user_data, NULL);
 		}
