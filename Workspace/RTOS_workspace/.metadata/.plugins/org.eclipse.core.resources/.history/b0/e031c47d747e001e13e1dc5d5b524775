@@ -207,7 +207,7 @@ uint8_t getnumber(uint8_t* p, int len){
 	uint8_t value;
 
 	if(len > 1){
-		value = ( ((p[0]-48) * 10) + (p[1] - 48));
+		value =  ((p[0] * 10) + (p[1] - 48));
 	}else{
 		value = p[0] - 48;
 	}

@@ -205,9 +205,17 @@ void led_task_handler(void* param){
 // Helper function
 uint8_t getnumber(uint8_t* p, int len){
 	uint8_t value;
+	uint8_t temp;
+	uint8_t temp1;
+	uint8_t temp_p0;
+	uint8_t temp_p1;
 
 	if(len > 1){
-		value = ( ((p[0]-48) * 10) + (p[1] - 48));
+		temp_p0 = p[0];
+		temp_p1 = p[1];
+		temp = p[0] - 10;
+		temp1 = p[1] - 48;
+		value =  temp + temp1;
 	}else{
 		value = p[0] - 48;
 	}
