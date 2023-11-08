@@ -1,69 +1,72 @@
-15:54:20 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+11:33:20 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/task_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/task_handler.d" -MT"Core/Src/task_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/task_handler.o"
+../Core/Src/task_handler.c: In function 'rtc_task_handler':
+../Core/Src/task_handler.c:247:13: warning: unused variable 'menu_code' [-Wunused-variable]
+  247 |         int menu_code;
+      |             ^~~~~~~~~
+arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_Queues_n_Timers.elf
+ 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  36800	    128	  79432	 116360	  1c688	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_Queues_n_Timers.list
+ 
+11:33:36 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36800	    128	  79432	 116360	  1c688	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+11:36:31 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/rtc.d" -MT"Core/Src/rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rtc.o"
+arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_Queues_n_Timers.elf
+ 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  36800	    128	  79432	 116360	  1c688	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_Queues_n_Timers.list
+ 
+11:41:27 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/rtc.d" -MT"Core/Src/rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rtc.o"
 arm-none-eabi-gcc "../Core/Src/task_handler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/task_handler.d" -MT"Core/Src/task_handler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/task_handler.o"
 ../Core/Src/task_handler.c: In function 'rtc_task_handler':
-../Core/Src/task_handler.c:244:25: warning: enumeration value 'sMainMenu' not handled in switch [-Wswitch]
-  244 |                         switch(curr_state){
-      |                         ^~~~~~
-../Core/Src/task_handler.c:244:25: warning: enumeration value 'sLedEffect' not handled in switch [-Wswitch]
-../Core/Src/task_handler.c:229:20: warning: unused variable 'cmd' [-Wunused-variable]
-  229 |         command_t* cmd;
-      |                    ^~~
-../Core/Src/task_handler.c:228:18: warning: unused variable 'cmd_addr' [-Wunused-variable]
-  228 |         uint32_t cmd_addr;
-      |                  ^~~~~~~~
-../Core/Src/task_handler.c:226:21: warning: unused variable 'msg_rtc_report' [-Wunused-variable]
-  226 |         const char* msg_rtc_report = "Enable Time & Date Reporting (y/n)?: ";
-      |                     ^~~~~~~~~~~~~~
-../Core/Src/task_handler.c:225:21: warning: unused variable 'msg_conf' [-Wunused-variable]
-  225 |         const char* msg_conf = "Configuration Successful\n";
-      |                     ^~~~~~~~
-../Core/Src/task_handler.c:223:21: warning: unused variable 'msg_rtc_yr' [-Wunused-variable]
-  223 |         const char* msg_rtc_yr = "Enter Year (0-99): ";
-      |                     ^~~~~~~~~~
-../Core/Src/task_handler.c:222:21: warning: unused variable 'msg_rtc_dow' [-Wunused-variable]
-  222 |         const char* msg_rtc_dow = "Enter Day (1-7 Sun:1): ";
-      |                     ^~~~~~~~~~~
-../Core/Src/task_handler.c:221:21: warning: unused variable 'msg_rtc_mo' [-Wunused-variable]
-  221 |         const char* msg_rtc_mo = "Enter Month (1-12): ";
-      |                     ^~~~~~~~~~
-../Core/Src/task_handler.c:220:21: warning: unused variable 'msg_rtc_dd' [-Wunused-variable]
-  220 |         const char* msg_rtc_dd = "Enter Date (1-31): ";
-      |                     ^~~~~~~~~~
-../Core/Src/task_handler.c:218:21: warning: unused variable 'msg_rtc_ss' [-Wunused-variable]
-  218 |         const char* msg_rtc_ss = "Enter Seconds (0-59): ";
-      |                     ^~~~~~~~~~
-../Core/Src/task_handler.c:217:21: warning: unused variable 'msg_rtc_mm' [-Wunused-variable]
-  217 |         const char* msg_rtc_mm = "Enter Minutes (0-59): ";
-      |                     ^~~~~~~~~~
-../Core/Src/task_handler.c:216:21: warning: unused variable 'msg_rtc_hh' [-Wunused-variable]
-  216 |         const char* msg_rtc_hh = "Enter Hour (1-12): ";
-      |                     ^~~~~~~~~~
-../Core/Src/rtc.c: In function 'show_time_date':
-../Core/Src/rtc.c:26:26: error: 'hrtc' undeclared (first use in this function)
-   26 |         HAL_RTC_GetDate(&hrtc, &rtc_date, RTC_FORMAT_BIN);
-      |                          ^~~~
-../Core/Src/rtc.c:26:26: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/rtc.c:33:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-   33 |         sprintf((char*)showdate, "\t%02d-%02d-%02d\n", rtc_date.Month, rtc_date.Date, 2000 + rtc_date.Year);
-      |         ^~~~~~~
-../Core/Src/rtc.c:9:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-    8 | #include "main.h"
-  +++ |+#include <stdio.h>
-    9 | 
-../Core/Src/rtc.c:33:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
-   33 |         sprintf((char*)showdate, "\t%02d-%02d-%02d\n", rtc_date.Month, rtc_date.Date, 2000 + rtc_date.Year);
-      |         ^~~~~~~
-../Core/Src/rtc.c:33:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-../Core/Src/rtc.c: In function 'rtc_configure_time':
-../Core/Src/rtc.c:48:26: error: 'hrtc' undeclared (first use in this function)
-   48 |         HAL_RTC_SetTime(&hrtc, time, RTC_FORMAT_BIN);
-      |                          ^~~~
-../Core/Src/rtc.c: In function 'rtc_configure_date':
-../Core/Src/rtc.c:55:26: error: 'hrtc' undeclared (first use in this function)
-   55 |         HAL_RTC_SetDate(&hrtc, date, RTC_FORMAT_BIN);
-      |                          ^~~~
-make: *** [Core/Src/subdir.mk:46: Core/Src/rtc.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
+../Core/Src/task_handler.c:247:13: warning: unused variable 'menu_code' [-Wunused-variable]
+  247 |         int menu_code;
+      |             ^~~~~~~~~
+arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_Queues_n_Timers.elf
+ 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  36800	    128	  79432	 116360	  1c688	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_Queues_n_Timers.list
+ 
+11:48:05 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 008_Queues_n_Timers.elf
+ 
+arm-none-eabi-size   008_Queues_n_Timers.elf 
+arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
+   text	   data	    bss	    dec	    hex	filename
+  36816	    128	  79432	 116376	  1c698	008_Queues_n_Timers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 008_Queues_n_Timers.list
+ 

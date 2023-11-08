@@ -29,13 +29,15 @@ void show_time_date(void){
 	char* format;
 	format = (rtc_time.TimeFormat == RTC_HOURFORMAT12_AM) ? "AM" : "PM";
 
+	// Display time Format : hh:mm:ss [AM/PM]
+	sprintf((char*)showtime, "%s: \t%02d:%02d:%02d [%s]", "\nCurrent Time&Date", rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds, format);
+	xQueueSend(q_print_handle, &time, portMAX_DELAY);
+
 	//Display Date Format : date-month-year
 	sprintf((char*)showdate, "\t%02d-%02d-%02d\n", rtc_date.Month, rtc_date.Date, 2000 + rtc_date.Year);
 	xQueueSend(q_print_handle, &date, portMAX_DELAY);
 
-	// Display time Format : hh:mm:ss [AM/PM]
-	sprintf((char*)showtime, "%s: \t%02d:%02d:%02d [%s]", "\nCurrent Time&Date", rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds, format);
-	xQueueSend(q_print_handle, &time, portMAX_DELAY);
+
 
 }
 
@@ -54,6 +56,22 @@ void rtc_configure_date(RTC_DateTypeDef* date){
 
 	HAL_RTC_SetDate(&hrtc, date, RTC_FORMAT_BIN);
 
+}
+
+int validate_rtc_information(RTC_TimeTypeDef* time, RTC_DateTypeDef* date){
+		if(time){
+			if( (time->Hours > 12) || (time->Minutes > 59) || (time->Seconds > 59)){
+				return 0;
+			}
+		}
+
+		if(date){
+			if( (date->Date > 31) || (date->WeekDay > 7) || (date->Year > 99) || (date->Month > 12)){
+				return 0;
+			}
+		}
+
+		return 1;
 }
 
 

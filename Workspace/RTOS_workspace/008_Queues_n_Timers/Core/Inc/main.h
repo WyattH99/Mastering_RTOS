@@ -37,6 +37,7 @@ extern "C" {
 #include "task.h"
 #include "queue.h"
 #include "timers.h"
+#include <stdio.h>
 
 /* USER CODE END Includes */
 
@@ -73,6 +74,7 @@ extern TimerHandle_t led_timer_handle[4];
 
 extern state_t curr_state;
 
+extern RTC_HandleTypeDef hrtc;
 extern UART_HandleTypeDef huart2;
 
 
@@ -104,6 +106,11 @@ void LED_effect1(void);
 void LED_effect2(void);
 void LED_effect3(void);
 void LED_effect4(void);
+
+void show_time_date(void);
+void rtc_configure_time(RTC_TimeTypeDef* time);
+void rtc_configure_date(RTC_DateTypeDef* date);
+int validate_rtc_information(RTC_TimeTypeDef* time, RTC_DateTypeDef* date);
 
 
 
