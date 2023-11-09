@@ -57,6 +57,7 @@ QueueHandle_t q_data_handle;
 QueueHandle_t q_print_handle;
 
 TimerHandle_t led_timer_handle[4];
+TimerHandle_t rtc_timer;
 
 volatile uint8_t user_data;
 
@@ -72,6 +73,7 @@ static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 void led_effect_callback(TimerHandle_t xTimer);
+void rtc_report_callback(TimerHandle_t xTimer);
 
 //void menu_task_handler(void* param);
 //void cmd_task_handler(void* param);
@@ -155,6 +157,9 @@ int main(void)
 	  led_timer_handle[i] = xTimerCreate("led_timer", pdMS_TO_TICKS(500), pdTRUE, (void*)(i+1), led_effect_callback);
 
   }
+
+  rtc_timer = xTimerCreate("rtc_report_timer", pdMS_TO_TICKS(1000), pdTRUE, NULL, rtc_report_callback);
+
 
   HAL_UART_Receive_IT(&huart2, (uint8_t*)&user_data, 1);
 
@@ -339,6 +344,10 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void rtc_report_callback(TimerHandle_t xTimer){
+	show_time_date_itm();
+}
 
 void led_effect_callback(TimerHandle_t xTimer){
 

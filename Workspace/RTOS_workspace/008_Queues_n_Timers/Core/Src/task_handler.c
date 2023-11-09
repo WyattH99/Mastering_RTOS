@@ -244,7 +244,6 @@ void rtc_task_handler(void* param){
 	command_t* cmd;
 
 	static int rtc_config_state = 0;
-	int menu_code;
 	int option;
 
 #define HH_CONFIG 0
@@ -397,8 +396,21 @@ void rtc_task_handler(void* param){
 					break;
 				}
 				case sRtcReport:{
-					//TODO: enable or disable RTC current time reporting over ITM printf
+					//enable or disable RTC current time reporting over ITM printf
+					if(cmd->len == 1){
+						if(cmd->payload[0] == 'y'){
+							if(xTimerIsTimerActive(rtc_timer) == pdFALSE)
+								xTimerStart(rtc_timer, portMAX_DELAY);
+						}else if (cmd->payload[0] == 'n'){
+							xTimerStop(rtc_timer, portMAX_DELAY);
+						}else{
+							xQueueSend(q_print_handle, &msg_inv, portMAX_DELAY);
+						}
+					}else{
+						xQueueSend(q_print_handle, &msg_inv, portMAX_DELAY);
+					}
 
+					curr_state = sMainMenu;
 					break;
 				}
 				default:{

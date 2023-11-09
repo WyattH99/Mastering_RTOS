@@ -1,4 +1,5 @@
-../Core/Src/rtc.c:11:6:show_time_date	2
-../Core/Src/rtc.c:46:6:rtc_configure_time	1
-../Core/Src/rtc.c:55:6:rtc_configure_date	1
-../Core/Src/rtc.c:61:5:validate_rtc_information	10
+../Core/Src/rtc.c:11:6:show_time_date_itm	2
+../Core/Src/rtc.c:35:6:show_time_date	2
+../Core/Src/rtc.c:70:6:rtc_configure_time	1
+../Core/Src/rtc.c:79:6:rtc_configure_date	1
+../Core/Src/rtc.c:85:5:validate_rtc_information	10

@@ -71,6 +71,7 @@ extern QueueHandle_t q_data_handle;
 extern QueueHandle_t q_print_handle;
 
 extern TimerHandle_t led_timer_handle[4];
+extern TimerHandle_t rtc_timer;
 
 extern state_t curr_state;
 
@@ -107,6 +108,7 @@ void LED_effect2(void);
 void LED_effect3(void);
 void LED_effect4(void);
 
+void show_time_date_itm(void);
 void show_time_date(void);
 void rtc_configure_time(RTC_TimeTypeDef* time);
 void rtc_configure_date(RTC_DateTypeDef* date);
