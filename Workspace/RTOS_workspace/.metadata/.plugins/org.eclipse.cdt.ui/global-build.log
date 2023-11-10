@@ -1,56 +1,45 @@
-12:37:07 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
+19:07:12 **** Incremental Build of configuration Debug for project 009_Binary_Semaphore_Tasks ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
-arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 008_Queues_n_Timers.elf
- 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
-   text	   data	    bss	    dec	    hex	filename
-  39840	    140	  79444	 119424	  1d280	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-Finished building: 008_Queues_n_Timers.list
- 
-12:37:12 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  39840	    140	  79444	 119424	  1d280	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-12:38:29 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/rtc.d" -MT"Core/Src/rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rtc.o"
-arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 008_Queues_n_Timers.elf
- 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
-   text	   data	    bss	    dec	    hex	filename
-  39844	    140	  79444	 119428	  1d284	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-Finished building: 008_Queues_n_Timers.list
- 
-12:39:01 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/rtc.d" -MT"Core/Src/rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/rtc.o"
-arm-none-eabi-gcc -o "008_Queues_n_Timers.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/008_Queues_n_Timers/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="008_Queues_n_Timers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 008_Queues_n_Timers.elf
- 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-arm-none-eabi-objdump -h -S  008_Queues_n_Timers.elf  > "008_Queues_n_Timers.list"
-   text	   data	    bss	    dec	    hex	filename
-  39840	    140	  79444	 119424	  1d280	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
-Finished building: 008_Queues_n_Timers.list
- 
-12:50:12 **** Incremental Build of configuration Debug for project 008_Queues_n_Timers ****
-make -j12 all 
-arm-none-eabi-size   008_Queues_n_Timers.elf 
-   text	   data	    bss	    dec	    hex	filename
-  39840	    140	  79444	 119424	  1d280	008_Queues_n_Timers.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/Config -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/OS -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER -I/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/common/ThirdParty/FreeRTOS -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:3: warning: implicit declaration of function 'RCC_DeInit'; did you mean 'HAL_DeInit'? [-Wimplicit-function-declaration]
+  109 |   RCC_DeInit();
+      |   ^~~~~~~~~~
+      |   HAL_DeInit
+../Core/Src/main.c:114:3: warning: implicit declaration of function 'prvSetupHardware' [-Wimplicit-function-declaration]
+  114 |   prvSetupHardware();
+      |   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:117:3: warning: implicit declaration of function 'SEGGER_SYSVIEW_Conf' [-Wimplicit-function-declaration]
+  117 |   SEGGER_SYSVIEW_Conf();
+      |   ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:118:3: warning: implicit declaration of function 'SEGGER_SYSVIEW_Start' [-Wimplicit-function-declaration]
+  118 |   SEGGER_SYSVIEW_Start();
+      |   ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:121:3: warning: implicit declaration of function 'printmsg'; did you mean 'printf'? [-Wimplicit-function-declaration]
+  121 |   printmsg(usr_msg);
+      |   ^~~~~~~~
+      |   printf
+../Core/Src/main.c: In function 'vManagerTask':
+../Core/Src/main.c:264:35: warning: implicit declaration of function 'rand' [-Wimplicit-function-declaration]
+  264 |                 xWorkTicketId = ( rand() & 0x1FF );
+      |                                   ^~~~
+../Core/Src/main.c: In function 'EmployeeDoWork':
+../Core/Src/main.c:286:9: warning: implicit declaration of function 'print'; did you mean 'printf'? [-Wimplicit-function-declaration]
+  286 |         print(usr_msg);
+      |         ^~~~~
+      |         printf
+arm-none-eabi-gcc -o "009_Binary_Semaphore_Tasks.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/009_Binary_Semaphore_Tasks/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="009_Binary_Semaphore_Tasks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `main':
+/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/009_Binary_Semaphore_Tasks/Debug/../Core/Src/main.c:109: undefined reference to `RCC_DeInit'
+/opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/009_Binary_Semaphore_Tasks/Debug/../Core/Src/main.c:114: undefined reference to `prvSetupHardware'
+/opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/009_Binary_Semaphore_Tasks/Debug/../Core/Src/main.c:121: undefined reference to `printmsg'
+/opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: /home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/009_Binary_Semaphore_Tasks/Debug/../Core/Src/main.c:143: undefined reference to `printmsg'
+/opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `vManagerTask':
+/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/009_Binary_Semaphore_Tasks/Debug/../Core/Src/main.c:271: undefined reference to `printmsg'
+/opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `EmployeeDoWork':
+/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/009_Binary_Semaphore_Tasks/Debug/../Core/Src/main.c:286: undefined reference to `print'
+/opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/main.o: in function `vEmployeeTask':
+/home/wyatt/Desktop/Mastering_RTOS/Workspace/RTOS_workspace/009_Binary_Semaphore_Tasks/Debug/../Core/Src/main.c:309: undefined reference to `printmsg'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:72: 009_Binary_Semaphore_Tasks.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
