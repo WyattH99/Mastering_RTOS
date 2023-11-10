@@ -32,12 +32,16 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
-#include "string.h"
-#include <stdio.h>
 #include "semphr.h"
+
+#include "stm32f4xx.h"
 
 /* USER CODE END Includes */
 

@@ -32,6 +32,9 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
+//#define DWT_CTRL    (*(volatile uint32_t*)0xE0001000)
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,7 +54,15 @@ static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
 
 
+//function prototypes
+//static void prvSetupHardware(void);
+//void printmsg(char *msg);
+//static void prvSetupUart(void);
+//void prvSetupGpio(void);
+
 // Task Creation
+TaskHandle_t xTaskHandleM=NULL;
+TaskHandle_t xTaskHandleE=NULL;
 void vManagerTask(void* pvParameters);
 void vEmployeeTask(void* pvParameters);
 
@@ -61,7 +72,7 @@ xSemaphoreHandle xWork;
 // Queue for the Manager to put the work ticket id
 xQueueHandle xWorkQueue;
 
-char* usr_msg;
+char* usr_msg[250] = {0};
 
 
 /* USER CODE END PFP */
@@ -111,14 +122,14 @@ int main(void)
   // Update the SystemCoreClock variable
   SystemCoreClockUpdate();
 
-  prvSetupHardware();
+//  prvSetupHardware();
 
   // Start Recording
-  SEGGER_SYSVIEW_Conf();
-  SEGGER_SYSVIEW_Start();
+//  SEGGER_SYSVIEW_Conf();
+//  SEGGER_SYSVIEW_Start();
 
   sprintf(usr_msg, "Demo of Binary Semaphore usage between 2 Tasks \r\n");
-  printmsg(usr_msg);
+  printf(usr_msg);
 
   // Explicitly Created Semaphore
   vSemaphoreCreateBinary(xWork);
@@ -140,7 +151,7 @@ int main(void)
   }
 
   sprintf(usr_msg, "Queue/Sema create failed.. \r\n");
-  printmsg(usr_msg);
+  printf(usr_msg);
 
 
   /* USER CODE END 2 */
@@ -268,7 +279,7 @@ void vManagerTask( void* pvParameters){
 
 		if( xStatus != pdPASS){
 			sprintf(usr_msg, "Could not send to the queue.\r\n");
-			printmsg(usr_msg);
+			printf(usr_msg);
 		}else{
 			// Manager Notifying the Employee by "Giving Semaphore
 			xSemaphoreGive(xWork);
@@ -283,7 +294,7 @@ void EmployeeDoWork(unsigned char TicketId){
 
 	// Implement the work according to the TicketId
 	sprintf(usr_msg, "Employee Task: Working on Ticket Id: %d\r\n", TicketId);
-	print(usr_msg);
+	printf(usr_msg);
 	vTaskDelay(TicketId);
 }
 
@@ -306,11 +317,107 @@ void vEmployeeTask(void* pvParameters){
 		}else{
 			// Didn't receive anything from the queue
 			sprintf(usr_msg, "Employee Task: Queue is empty, nothing to do.\r\n");
-			printmsg(usr_msg);
+			printf(usr_msg);
 		}
 
 	}
 }
+
+
+//static void prvSetupHardware(void)
+//{
+//	//Setup Button and LED
+//	prvSetupGpio();
+//
+//	//setup UART2
+//	prvSetupUart();
+//}
+
+//void printmsg(char *msg)
+//{
+//	for(uint32_t i=0; i < strlen(msg); i++)
+//	{
+//		while ( USART_GetFlagStatus(USART2,USART_FLAG_TXE) != SET);
+//		USART_SendData(USART2,msg[i]);
+//	}
+//
+//	while ( USART_GetFlagStatus(USART2,USART_FLAG_TC) != SET);
+//
+//}
+
+//
+//static void prvSetupUart(void)
+//{
+//	GPIO_InitTypeDef gpio_uart_pins;
+//	USART_InitTypeDef uart2_init;
+//
+//	//1. Enable the UART2  and GPIOA Peripheral clock
+//	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2,ENABLE);
+//	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA,ENABLE);
+//
+//	//PA2 is UART2_TX, PA3 is UART2_RX
+//
+//	//2. Alternate function configuration of MCU pins to behave as UART2 TX and RX
+//
+//	//zeroing each and every member element of the structure
+//	memset(&gpio_uart_pins,0,sizeof(gpio_uart_pins));
+//
+//	gpio_uart_pins.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_3;
+//	gpio_uart_pins.GPIO_Mode = GPIO_Mode_AF;
+//	gpio_uart_pins.GPIO_PuPd = GPIO_PuPd_UP;
+//	gpio_uart_pins.GPIO_OType= GPIO_OType_PP;
+//	gpio_uart_pins.GPIO_Speed = GPIO_High_Speed;
+//	GPIO_Init(GPIOA, &gpio_uart_pins);
+//
+//
+//	//3. AF mode settings for the pins
+//	GPIO_PinAFConfig(GPIOA,GPIO_PinSource2,GPIO_AF_USART2); //PA2
+//	GPIO_PinAFConfig(GPIOA,GPIO_PinSource3,GPIO_AF_USART2); //PA3
+//
+//	//4. UART parameter initializations
+//	//zeroing each and every member element of the structure
+//	memset(&uart2_init,0,sizeof(uart2_init));
+//
+//	uart2_init.USART_BaudRate = 115200;
+//	uart2_init.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+//	uart2_init.USART_Mode =  USART_Mode_Tx | USART_Mode_Rx;
+//	uart2_init.USART_Parity = USART_Parity_No;
+//	uart2_init.USART_StopBits = USART_StopBits_1;
+//	uart2_init.USART_WordLength = USART_WordLength_8b;
+//	USART_Init(USART2,&uart2_init);
+//
+//
+//	//5. Enable the UART2 peripheral
+//	USART_Cmd(USART2,ENABLE);
+//
+//}
+
+
+//void prvSetupGpio(void)
+//{
+//	// this function is board specific
+//
+//	//Peripheral clock enable for GPIOA and GPIOC
+//	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA,ENABLE);
+//	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC,ENABLE);
+//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG,ENABLE);
+//
+//	GPIO_InitTypeDef led_init, button_init;
+//	led_init.GPIO_Mode = GPIO_Mode_OUT;
+//	led_init.GPIO_OType = GPIO_OType_PP;
+//	led_init.GPIO_Pin = GPIO_Pin_5;
+//	led_init.GPIO_Speed = GPIO_Low_Speed;
+//	led_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
+//	GPIO_Init(GPIOA,&led_init);
+//
+//	button_init.GPIO_Mode = GPIO_Mode_IN;
+//	button_init.GPIO_OType = GPIO_OType_PP;
+//	button_init.GPIO_Pin = GPIO_Pin_13;
+//	button_init.GPIO_Speed = GPIO_Low_Speed;
+//	button_init.GPIO_PuPd = GPIO_PuPd_NOPULL;
+//	GPIO_Init(GPIOC,&button_init);
+//
+//}
 /* USER CODE END 4 */
 
 /**
